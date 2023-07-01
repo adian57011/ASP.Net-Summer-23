@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+}
+
+<h2>SignUp</h2>
+
+<center>
+    <form method="post">
+
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" name="Name" value="@(Model != null ? Model.Name : "")" class="form-control" placeholder="Enter Your Name" />
+                </td>
+                <td>
+                    <span class="text-danger">@Html.ValidationMessage("Name")</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>
+                    <input type="text" name="Age" value="@(Model != null ? Model.Age: "")" class="form-control" placeholder="Enter Your Age"/>
+                </td>
+                <td>
+                    <span class="text-danger">@Html.ValidationMessage("Age")</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="Gender" value="Male" class="form-check-input" />Male
+                </td>
+                <td>
+                    <input type="radio" name="Gender" value="Female" class="form-check-input" />Female
+                </td>
+                <td>
+                    <span class="text-danger">@Html.ValidationMessage("Gender")</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" name="Email" value="@(Model != null ? Model.Email:"")" class="form-control" placeholder="Enter you email" />
+                </td>
+                <td>
+                    <span class="text-danger">@Html.ValidationMessage("Email")</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Contact Number</td>
+                <td>
+                    <input type="text" name="Contact" value="@(Model != null ? Model.Contact: "")" class="form-control" placeholder="Enter your contact information" />
+                </td>
+                <td>
+                    <span class="text-danger">@Html.ValidationMessage("Contact")</span>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td> <input type="submit" name="Submit" /> </td>
+            </tr>
+        </table>
+
+    </form>
+</center>
+
